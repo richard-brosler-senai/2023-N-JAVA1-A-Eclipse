@@ -11,13 +11,22 @@ public class Produto {
 	private String nome;
 	private int qtde;
 	private double preco;
-	//Criar o constructor da Classe
+	/**
+	 * Constructor padrão da classe
+	 */
 	public Produto() {
 		numeroItem=0;
 		nome=null;
 		qtde=0;
 		preco=0.0;
 	}
+	/**
+	 * Constructor com parâmetros
+	 * @param pNrItem - Informar o código do produto
+	 * @param pNome - Informar o nome do produto
+	 * @param pQtde - Informar a quantidade de produto em estoque
+	 * @param pPreco - Informar o preço do produto
+	 */
 	public Produto(int pNrItem, String pNome, int pQtde, double pPreco) {
 		numeroItem = pNrItem;
 		nome = pNome;
@@ -56,5 +65,4 @@ public class Produto {
 			 "\nQuantidade em estoque.: " + qtde +
 			 "\nPreço.................: " + preco;
 	}
-
 }
