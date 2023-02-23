@@ -11,6 +11,7 @@ public class Produto {
 	private String nome;
 	private int qtde;
 	private double preco;
+	private boolean ativo;
 	/**
 	 * Constructor padrão da classe
 	 */
@@ -19,6 +20,7 @@ public class Produto {
 		nome=null;
 		qtde=0;
 		preco=0.0;
+		setAtivo(true);
 	}
 	/**
 	 * Constructor com parâmetros
@@ -63,6 +65,14 @@ public class Produto {
 		return "Número do item........: " + numeroItem + 
 			 "\nNome..................: " + nome + 
 			 "\nQuantidade em estoque.: " + qtde +
-			 "\nPreço.................: " + preco;
+			 "\nPreço.................: " + preco +
+			 "\nStatus do produto.....: " + 
+			   (ativo ? "Ativo": "Descontinuado");
+	}
+	public boolean isAtivo() {
+		return ativo;
+	}
+	public void setAtivo(boolean ativo) {
+		this.ativo = ativo;
 	}
 }

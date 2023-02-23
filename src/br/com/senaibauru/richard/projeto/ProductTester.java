@@ -1,36 +1,63 @@
 package br.com.senaibauru.richard.projeto;
 
+import java.util.Scanner;
+
 public class ProductTester {
 
 	public static void main(String[] args) {
-		/*
-		 * Produtos com o Constructor padrão 
-		 */
-		//Criando um produto
-		Produto prod1 = new Produto();
-		prod1.setNome("Caneta Bic Azul");
-		prod1.setNumeroItem(1);
-		prod1.setPreco(5.10);
-		prod1.setQtde(100);
-		System.out.println("Produto 1 - Criado :\n" + prod1.toString());
-		//Criando o produto 2
-		Produto prod2 = new Produto();
-		prod2.setNome("Caneta Bic Vermelha");
-		prod2.setNumeroItem(2);
-		prod2.setPreco(6.20);
-		prod2.setQtde(120);
-		System.out.println("Produto 2 - Criado :\n" + prod2.toString());
-		/*
-		 * Produtos com o Constructor com parâmetros
-		 */
-		Produto prod3 = new Produto(3,"Caneta Bic Verde",110,6.50);
-		System.out.println("Produto 3 - Criado :\n" + prod3.toString());
-		Produto prod4 = new Produto(4,"Caneta Bic Amarela",90,6.80);
-		System.out.println("Produto 4 - Criado :\n" + prod4.toString());
-		Produto prod5 = new Produto(5,"Caneta Bic Preta",160,5.00);
-		System.out.println("Produto 5 - Criado :\n" + prod5.toString());
-		Produto prod6 = new Produto(6,"Caneta Bic Rosa",80,7.50);
-		System.out.println("Produto 6 - Criado :\n" + prod6.toString());
+		// TODO Auto-generated method stub
+		Scanner in = new Scanner(System.in);
+		String nome;
+		int nrItem,qtdeItem;
+		double preco;
+		System.out.println("Digite o numero do produto: ");
+		nrItem = in.nextInt();
+		in.nextLine(); //limpeza do buffer (tira o enter)
+		System.out.println("Digite o nome do produto:");
+		nome = in.nextLine();
+		System.out.println("Digite a quantidade do produto:");
+		qtdeItem = in.nextInt();
+		System.out.println("Digite o preço do produto:");
+		preco = in.nextDouble();
+		
+		Produto p1 = new Produto();
+		p1.setNumeroItem(nrItem);
+		p1.setNome(nome);
+		p1.setPreco(preco);
+		p1.setQtde(qtdeItem);
+		System.out.println(p1.toString());
+		
+		System.out.println("Digite o numero do produto: ");
+		nrItem = in.nextInt();
+		in.nextLine(); //limpeza do buffer (tira o enter)
+		System.out.println("Digite o nome do produto:");
+		nome = in.nextLine();
+		System.out.println("Digite a quantidade do produto:");
+		qtdeItem = in.nextInt();
+		System.out.println("Digite o preço do produto:");
+		preco = in.nextDouble();
+		
+		in.close(); //fechando o scanner
+		Produto p2 = new Produto();
+		p2.setNumeroItem(nrItem);
+		p2.setNome(nome);
+		p2.setPreco(preco);
+		p2.setQtde(qtdeItem);
+		p2.setAtivo(false);
+		
+		System.out.println(p2.toString());
+		
+		Produto p3 = new Produto(3,"Produto 3",102,17.00);
+		System.out.println(p3.toString());
+
+		Produto p4 = new Produto(4,"Produto 4",103,18.00);
+		System.out.println(p4.toString());
+
+		Produto p5 = new Produto(5,"Produto 5",104,19.00);
+		System.out.println(p5.toString());
+
+		Produto p6 = new Produto(6,"Produto 6",105,20.00);
+		System.out.println(p6.toString());
 		
 	}
 

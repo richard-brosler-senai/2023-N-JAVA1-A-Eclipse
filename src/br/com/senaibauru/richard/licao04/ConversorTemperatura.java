@@ -48,18 +48,18 @@ public class ConversorTemperatura {
 		//Calculando de Fahrenheit para outras temperaturas
 		case 2:
 			switch(tipoDestino) {
-			case 1: resultado = 0; //TODO: colocar a formula de Fahrenheit para Celsius
+			case 1: resultado = ( 5 * temperatura - 32 * 5 ) / 9; //TODO: colocar a formula de Fahrenheit para Celsius
 					break;
-			case 3: resultado = 0; //TODO: colocar a formula de Fahrenheit para Kelvin
+			case 3: resultado = ( 5 * temperatura - 32 * 5 ) / 9 + 273; //TODO: colocar a formula de Fahrenheit para Kelvin
 					break;
 			}
 			break; //break do case 2
 		//Calculando de Kelvin para outras temperaturas
 		case 3:
 			switch(tipoDestino) {
-			case 1: resultado = 0; //TODO: colocar a formula de Kelvin para Celsius
+			case 1: resultado = temperatura - 273; //TODO: colocar a formula de Kelvin para Celsius
 					break;
-			case 2: resultado = 0; //TODO: colocar a formula de Kelvin para Fahrenheit
+			case 2: resultado = ( temperatura * 9 - 273 * 9 ) / 5 + 32; //TODO: colocar a formula de Kelvin para Fahrenheit
 					break;
 			}
 			break; //break do case 3
