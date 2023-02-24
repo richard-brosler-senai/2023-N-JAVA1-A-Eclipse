@@ -66,6 +66,8 @@ public class Produto {
 			 "\nNome..................: " + nome + 
 			 "\nQuantidade em estoque.: " + qtde +
 			 "\nPreço.................: " + preco +
+			 "\nValor do Estoque......: " + 
+			     getValorDoInventario() +
 			 "\nStatus do produto.....: " + 
 			   (ativo ? "Ativo": "Descontinuado");
 	}
@@ -74,5 +76,9 @@ public class Produto {
 	}
 	public void setAtivo(boolean ativo) {
 		this.ativo = ativo;
+	}
+	
+	public double getValorDoInventario() {
+		return preco * qtde;
 	}
 }
