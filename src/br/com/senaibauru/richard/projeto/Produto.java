@@ -81,4 +81,29 @@ public class Produto {
 	public double getValorDoInventario() {
 		return preco * qtde;
 	}
+	
+	public void addToInvetory(int value) throws Exception {
+		if (value <= 0) {
+			throw new Exception("Valor deve ser "
+					+ "maior que zero!");
+		}
+		if (!isAtivo()) {
+			throw new Exception("Produto inativo!");
+		}
+		qtde += value;
+	}
+	
+	public void deductFromInventory(int value) throws Exception {
+		if (value <= 0) {
+			throw new Exception("Valor deve ser "
+					+ "maior que zero!");
+		}
+		if (!isAtivo()) {
+			throw new Exception("Produto inativo!");
+		}
+		if (getQtde()<value) {
+			throw new Exception("Não tem estoque suficiente!");
+		}
+		qtde -= value;
+	}
 }
