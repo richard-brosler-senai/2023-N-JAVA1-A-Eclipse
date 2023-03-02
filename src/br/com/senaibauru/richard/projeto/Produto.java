@@ -34,6 +34,7 @@ public class Produto {
 		nome = pNome;
 		qtde = pQtde;
 		preco = pPreco;
+		setAtivo(true);
 	}
 	//Criar getters e setters
 	public int getNumeroItem() {
